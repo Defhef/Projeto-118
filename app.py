@@ -30,14 +30,14 @@ def predict():
 
 
 # nome da rota igual ao nome dentro de url na linha 142 e metodo POST
-@app.route('/' , methods = [''])
+@app.route('/save' , methods = ['POST'])
 def save():
 
     # extraindo OS dados JSON coloque a baixo o valor da chave que esta na linha 137 do arquivo index.js ex.date
     date = request.json.get('date')
-    product = request.json.get('')
-    review = request.json.get('')
-    sentiment = request.json.get('')
+    product = request.json.get('product')
+    review = request.json.get('review')
+    sentiment = request.json.get('sentinent')
 
    
     data_entry = date + "," + product + "," + review + "," + sentiment
